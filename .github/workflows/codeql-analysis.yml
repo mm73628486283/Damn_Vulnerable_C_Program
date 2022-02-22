@@ -64,7 +64,7 @@ jobs:
     #    uses a compiled language
 
     - run: |
-        make
+        clang -fsanitize=fuzzer,address,undefined -g imgRead_libfuzzer.c -o imgRead_libfuzzer
     #   make bootstrap
     #   make release
 
